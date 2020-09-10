@@ -29,7 +29,7 @@ export default function Form(props) {
 	const classes = useStyles();
 	const submitAdd = (data) => {
 		axios
-			.post('https://node-api-4-duncan.herokuapp.com//api/users', data)
+			.post('https://node-api-4-duncan.herokuapp.com/api/users', data)
 			.then((res) => {
 				props.setUsers([...props.users, res.data]);
 				props.setAdding(false);
@@ -41,7 +41,7 @@ export default function Form(props) {
 	const submitEdit = (data) => {
 		axios
 			.put(
-				`https://node-api-4-duncan.herokuapp.com//api/users/${props.user.id}`,
+				`https://node-api-4-duncan.herokuapp.com/api/users/${props.user.id}`,
 				data
 			)
 			.then((res) => {
